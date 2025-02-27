@@ -5,7 +5,7 @@ const adminRouter = Router();
 const jwt = require("jsonwebtoken");
 const {JWT_ADMIN_PASSWORD} = require("../config");
 
-adminRouter.post("/singup",async(req,res)=>{
+adminRouter.post("/signup",async(req,res)=>{
 
     const {email,password ,firstName,lastName} = req.body;
 
@@ -17,12 +17,12 @@ adminRouter.post("/singup",async(req,res)=>{
     })
 
     res.json({
-        message:"Singup succeeded"
+        message:"Signup succeeded"
     })
 
 })
 
-adminRouter.post("/singin",async(req,res)=>{
+adminRouter.post("/signin",async(req,res)=>{
 
     const {email,password} = req.body;
 

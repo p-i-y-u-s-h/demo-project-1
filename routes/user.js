@@ -5,7 +5,7 @@ const {JWT_USER_PASSWORD} = require("../config");
 
 const userRouter = Router();
 
-userRouter.post("/singup",async(req,res)=>{
+userRouter.post("/signup",async(req,res)=>{
     const {email,password ,firstName,lastName} = req.body;
 
     await userModel.create({
@@ -16,12 +16,12 @@ userRouter.post("/singup",async(req,res)=>{
     })
 
     res.json({
-        message:"Singup succeeded"
+        message:"Signup succeeded"
     })
 
 })
 
-userRouter.post("/singin",async (req,res)=>{
+userRouter.post("/signin",async (req,res)=>{
     const {email,password} = req.body;
 
     const user = await userModel.findOne({
