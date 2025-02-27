@@ -1,5 +1,5 @@
 const mongoose = require ("mongoose");
-mongoose.connect("mongodb+srv://course:gwbSfGyPd7KBqvdT@cluster0.rmlmh.mongodb.net/mini-2");
+mongoose.connect(process.env.MONGO_URL);
 
 const Schema = mongoose.Schema;
 const ObjetId = mongoose.Types.ObjectId;
