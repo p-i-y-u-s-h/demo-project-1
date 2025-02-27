@@ -11,7 +11,7 @@ app.use("/api/v1/courses",coursesRouter);
 app.use("/api/v1/admin",adminRouter);
 
 async function main(){
-    await mongoose.connect("");
+    await mongoose.connect("mongodb+srv://course:gwbSfGyPd7KBqvdT@cluster0.rmlmh.mongodb.net/mini-2");
     app.listen(3000);
     console.log("hiuegenjhhon")
 }
